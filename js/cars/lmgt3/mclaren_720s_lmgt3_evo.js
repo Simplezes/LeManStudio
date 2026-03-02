@@ -98,19 +98,15 @@ window.CARS["mclaren_720s_lmgt3_evo"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "The 'Velocity' profile. Maintains the McLaren's sleek efficiency with minimal wing and height.",
             values: { wing: 5.4, fh: 5.0, rh: 5.9, farb: 4, rarb: 3, bias: 51.1 }
         },
         "High Downforce": {
-            desc: "High-speed precision setup. Maximized aero grip for high-confidence cornering.",
             values: { wing: 10.5, fh: 5.6, rh: 7.5, farb: 8, rarb: 5, fs: 5, rs: 5 }
         },
         "Understeer": {
-            desc: "Safest possible balance. Locked-in front end and forward bias for endurance stability.",
             values: { farb: 10, rarb: 1, fs: 5, rs: 1, fh: 5.6, rh: 6.0, bias: 55.9, wing: 9.0 }
         },
         "Oversteer": {
-            desc: "Snappy and aggressive. High rake and rear stiffness to help the car dive into corners.",
             values: { farb: 3, rarb: 10, fs: 2, rs: 6, fh: 5.0, rh: 8.8, bias: 48.1, wing: 6.0 }
         }
     }

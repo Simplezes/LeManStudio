@@ -93,19 +93,15 @@ window.CARS["mercedes_amg_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Minimal drag configuration for high-speed circuits. Flat wing and lowest possible height.",
             values: { wing: 0.0, fh: 5.0, rh: 5.2, farb: 2, rarb: 2, bias: 50.5 }
         },
         "High Downforce": {
-            desc: "Steep wing angle and balanced suspension for maximum turn-in grip and confidence.",
             values: { wing: 7.0, fh: 5.8, rh: 7.5, farb: 6, rarb: 7, fs: 4, rs: 6 }
         },
         "Understeer": {
-            desc: "Safety-first setup. Stiff front ARBs and forward bias for heavy-braking stability.",
             values: { farb: 10, rarb: 1, fs: 5, rs: 2, fh: 5.5, rh: 5.8, bias: 55.6, wing: 4.0 }
         },
         "Oversteer": {
-            desc: "Aggressive pivot balance. High rake and stiff rear suspension to maximize rotation.",
             values: { farb: 1, rarb: 10, fs: 2, rs: 6, fh: 5.0, rh: 8.5, bias: 48.1, wing: 1.0 }
         }
     }

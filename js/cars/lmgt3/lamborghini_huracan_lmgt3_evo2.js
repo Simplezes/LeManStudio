@@ -89,19 +89,15 @@ window.CARS["lamborghini_huracan_lmgt3_evo2"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Designed for high-speed aero efficiency. Minimal wing and ride height to reduce mechanical drag.",
             values: { wing: 4.0, fh: 5.0, rh: 5.9, farb: 6, rarb: 3, bias: 51.4 }
         },
         "High Downforce": {
-            desc: "The 'Technical Master' setup. Maximized aero load for slow speed corners and high stability.",
             values: { wing: 8.0, fh: 5.5, rh: 7.0, farb: 14, rarb: 5, bias: 52.9 }
         },
         "Understeer": {
-            desc: "Safe and planted. Extreme front stiffness and forward bias for the ultimate predictable ride.",
             values: { farb: 18, rarb: 1, fs: 6, rs: 6, fh: 5.4, rh: 5.9, bias: 56.5, wing: 6.0 }
         },
         "Oversteer": {
-            desc: "The 'Rotating Bull'. Stiff rear and high rake to help this mid-engine beast pivot instantly.",
             values: { farb: 4, rarb: 5, fs: 6, rs: 6, fh: 5.0, rh: 8.5, bias: 48.1, wing: 5.0 }
         }
     }

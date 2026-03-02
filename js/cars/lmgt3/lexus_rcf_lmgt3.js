@@ -79,19 +79,15 @@ window.CARS["lexus_rcf_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Focus on reducing drag for high-speed circuits like Le Mans. Flatter wing and lower ride height.",
             values: { wing: 7.0, fh: 5.0, rh: 5.2, farb: 3, rarb: 2, bias: 50.5 }
         },
         "High Downforce": {
-            desc: "Steep wing angle and adjusted rake for maximum aerodynamic grip in technical sectors.",
             values: { wing: 13.0, fh: 5.5, rh: 7.0, farb: 5, rarb: 4, fs: 5, rs: 4 }
         },
         "Understeer": {
-            desc: "Stability focused profile. Stiff front roll-bars and forward bias for a rock-solid braking feel.",
             values: { farb: 7, rarb: 1, fs: 5, rs: 1, fh: 5.4, rh: 5.6, bias: 55.6, wing: 11.0 }
         },
         "Oversteer": {
-            desc: "Sharp turn-in setup. High rake and stiff rear suspension to overcome the Lexus's weight.",
             values: { farb: 1, rarb: 7, fs: 2, rs: 5, fh: 5.0, rh: 8.5, bias: 48.1, wing: 8.0 }
         }
     },

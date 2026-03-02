@@ -74,19 +74,15 @@ window.CARS["ferrari_296_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Unleash the Ferrari's top speed engine with minimal drag and floor-hugging ride height.",
             values: { wing: 0.6, fh: 5.0, rh: 5.2, farb: 3, rarb: 3, bias: 51.4 }
         },
         "High Downforce": {
-            desc: "Maximized aero grip for technical tracks like Portimao or Bahrain.",
             values: { wing: 4.5, fh: 5.5, rh: 7.0, farb: 5, rarb: 4, fs: 6, rs: 5 }
         },
         "Understeer": {
-            desc: "Ensures front-end stability. Stiff front roll-bars prevent any snappy behavior.",
             values: { farb: 7, rarb: 2, fs: 8, rs: 2, fh: 5.2, rh: 5.5, bias: 55.0, wing: 3.85 }
         },
         "Oversteer": {
-            desc: "Aggressive pivot balance. High rake and stiff rear ARB for professional rotations.",
             values: { farb: 2, rarb: 7, fs: 4, rs: 7, fh: 5.0, rh: 7.5, bias: 49.0, wing: 1.9 }
         }
     }

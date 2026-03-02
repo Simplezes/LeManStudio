@@ -77,19 +77,15 @@ window.CARS["chevrolet_corvette_Z06_r"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Maximum velocity setup. Minimal wing and mechanical drag for high-speed dominance.",
             values: { wing: 1.5, fh: 5.2, rh: 5.5, farb: 8, rarb: 1, bias: 51.1 }
         },
         "High Downforce": {
-            desc: "Mountain of grip. High wing angle and optimized rake for technical sectors.",
             values: { wing: 6.5, fh: 5.5, rh: 7.5, farb: 18, rarb: 4, bias: 52.9 }
         },
         "Understeer": {
-            desc: "Stability focus. Stiff front anti-roll bars and forward bias to lock the car into a safe path.",
             values: { farb: 25, rarb: 1, fs: 3, rs: 1, fh: 5.4, rh: 6.0, bias: 56.5, wing: 4.5 }
         },
         "Oversteer": {
-            desc: "Loose and fast. Soft front and aggressive rear stiffness to help the heavy Corvette pivot.",
             values: { farb: 5, rarb: 12, fs: 2, rs: 5, fh: 5.2, rh: 8.5, bias: 48.4, wing: 2.5 }
         }
     }

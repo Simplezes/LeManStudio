@@ -92,19 +92,15 @@ window.CARS["ford_mustang_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Streamlined Mustang. Minimal wing and rake to maximize the V8's power on straights.",
             values: { wing: 0.0, fh: 5.0, rh: 5.2, farb: 2, rarb: 2, bias: 51.4 }
         },
         "High Downforce": {
-            desc: "Maximum downforce profile for agility and high-speed cornering confidence.",
             values: { wing: 7.0, fh: 5.5, rh: 7.5, farb: 6, rarb: 4, fs: 4, rs: 3 }
         },
         "Understeer": {
-            desc: "Dead-steady balance. Front-loaded stiffness to ensure the car never snaps.",
             values: { farb: 8, rarb: 1, fs: 8, rs: 1, fh: 5.5, rh: 5.8, bias: 54.4, wing: 5.0 }
         },
         "Oversteer": {
-            desc: "High-rotation setup. Rear stiffness and rake to overcome mid-corner push.",
             values: { farb: 1, rarb: 8, fs: 1, rs: 6, fh: 5.0, rh: 9.0, bias: 48.1, wing: 2.0 }
         }
     }

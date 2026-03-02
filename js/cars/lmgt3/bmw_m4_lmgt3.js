@@ -64,19 +64,15 @@ window.CARS["bmw_m4_lmgt3"] = window.CAR_DATA = {
     ],
     presets: {
         "Low Downforce": {
-            desc: "Minimal wing and low ride height for maximum straight-line speed at Le Mans or Monza.",
             values: { wing: -2.3, fh: 5.0, rh: 5.2, farb: 3, rarb: 3, bias: 50.5 }
         },
         "High Downforce": {
-            desc: "Aggressive wing and balanced rake for maximum cornering speed and technical circuits.",
             values: { wing: 4.6, fh: 5.5, rh: 7.2, farb: 6, rarb: 4, fs: 4, rs: 3 }
         },
         "Understeer": {
-            desc: "Safety-first setup. Stiff front and forward bias makes the car highly stable and predictable.",
             values: { farb: 8, rarb: 1, fs: 5, rs: 1, fh: 5.2, rh: 5.5, bias: 54.4, wing: 3.7 }
         },
         "Oversteer": {
-            desc: "Pivot-focused setup. Stiff rear and high rake allows the car to rotate aggressively on corner entry.",
             values: { farb: 1, rarb: 8, fs: 1, rs: 5, fh: 5.0, rh: 8.5, bias: 48.1, wing: 1.3 }
         }
     }
