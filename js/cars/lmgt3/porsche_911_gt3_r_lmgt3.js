@@ -73,6 +73,20 @@ window.CARS["porsche_911_gt3_r_lmgt3"] = {
         }
     ],
     presets: {
+        "Low Downforce": {
+            values: { wing: 6.3, fh: 5.0, rh: 6.5, ftoe: -0.06, rtoe: 0.20, fcam: -2.1, rcam: -1.5, fs: 6, rs: 3, farb: 4, rarb: 2 }
+        },
 
+        "High Downforce": {
+            values: { wing: 12.3, fh: 5.2, rh: 7.2, ftoe: -0.06, rtoe: 0.25, fcam: -2.3, rcam: -1.7, fs: 7, rs: 4, farb: 5, rarb: 2 }
+        },
+
+        "Understeer": {
+            values: { wing: 11.3, fs: 8, rs: 2, farb: 6, rarb: 1, ftoe: 0.00, rtoe: 0.30, fcam: -1.9, rcam: -1.4, bias: 50.0 }
+        },
+
+        "Oversteer": {
+            values: { wing: 7.3, fs: 4, rs: 5, farb: 3, rarb: 3, ftoe: -0.12, rtoe: 0.15, fcam: -2.4, rcam: -1.8, bias: 47.5 }
+        }
     }
 };

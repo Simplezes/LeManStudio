@@ -59,6 +59,20 @@ window.CARS["aston_martin_vantage_lmgt3"] = {
         }
     ],
     presets: {
+        "Low Downforce": {
+            values: { wing: 5.0, fh: 5.3, rh: 6.4, fs: 5, rs: 3, farb: 5, rarb: 3, ftoe: -0.06, rtoe: 0.20, fcam: -2.2, rcam: -1.5, bias: 49.0 }
+        },
 
+        "High Downforce": {
+            values: { wing: 11.0, fh: 5.6, rh: 7.4, fs: 6, rs: 4, farb: 7, rarb: 3, ftoe: -0.06, rtoe: 0.25, fcam: -2.4, rcam: -1.7, bias: 49.5 }
+        },
+
+        "Understeer": {
+            values: { wing: 10.0, fs: 6, rs: 2, farb: 9, rarb: 1, ftoe: 0.00, rtoe: 0.30, fcam: -1.9, rcam: -1.3, bias: 50.5 }
+        },
+
+        "Oversteer": {
+            values: { wing: 6.0, fs: 3, rs: 5, farb: 4, rarb: 6, ftoe: -0.12, rtoe: 0.15, fcam: -2.6, rcam: -1.9, bias: 48.5 }
+        }
     }
 };
