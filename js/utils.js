@@ -78,50 +78,5 @@ window.LMA_Utils = {
             return car.ranges[id];
         }
         return { min: 0, max: 100, step: 1 };
-    },
-
-    formatLabel: (car, id, val) => {
-        let displayVal = val;
-        const config = window.LMA_Utils.getItemConfig(car, id);
-
-        if (config) {
-            if (config.reverse && typeof val === 'number') {
-                displayVal = (config.max + config.min) - val;
-            }
-
-            if (config.type === 'labeled') {
-                const opt = config.options[val];
-                displayVal = opt !== undefined ? (typeof opt === 'object' ? opt.label : opt) : val;
-            } else if (typeof displayVal === 'number') {
-                let decimals = 0;
-                if (config.step !== undefined) {
-                    const stepStr = config.step.toString();
-                    decimals = stepStr.indexOf('.') > -1 ? stepStr.split('.')[1].length : 0;
-                }
-                const unit = config.unit || '';
-                if (config.unit === 'mm' || unit === 'cm') decimals = Math.min(decimals, 1);
-                else decimals = Math.min(decimals, 3);
-
-                if (id === 'wing') decimals = 2;
-
-                displayVal = displayVal.toFixed(decimals);
-            }
-
-            if (config.unit && typeof displayVal === 'string' && !displayVal.includes(config.unit)) {
-                let unit = config.unit;
-                if (unit === 'deg') unit = '°';
-                displayVal += unit;
-            }
-
-            if (config.prefix && typeof displayVal === 'string' && !displayVal.startsWith(config.prefix)) {
-                displayVal = config.prefix + displayVal;
-            }
-        } else if (car.ranges && car.ranges[id]) {
-            const range = car.ranges[id];
-            if (range.labelPrefix) displayVal = range.labelPrefix + val;
-            if (range.labels) displayVal = range.labels[val] || val;
-        }
-
-        return displayVal;
     }
 };

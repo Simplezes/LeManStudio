@@ -127,6 +127,8 @@ window.LMA_UI = {
         tempPresets: document.getElementById('tempPresets'),
 
         // Navigation / Menus
+        gameLMU: document.getElementById('gameLMU'),
+        gameAC: document.getElementById('gameAC'),
         openGarageBtn: document.getElementById('openGarageBtn'),
         modeBasic: document.getElementById('modeBasic'),
         modeAdvanced: document.getElementById('modeAdvanced'),

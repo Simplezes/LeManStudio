@@ -1468,3 +1468,87 @@ body.mode-basic .setting-advanced {
     color: rgb(96, 165, 250);
     border-bottom-color: rgba(96, 165, 250, 0.4);
 }
+
+/* ─── Custom Number Spinners (Fuel Calc) ─────────────────────────────────────── */
+.spin-container {
+    display: flex;
+    align-items: stretch;
+    background: #020617;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    transition: border-color 0.2s ease;
+    height: 24px;
+    width: 100%;
+}
+
+.spin-container:focus-within {
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.spin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    width: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.spin-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.spin-btn:active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.spin-input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 10px;
+    color: inherit;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.spin-input::-webkit-outer-spin-button,
+.spin-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* ─── Fuel Calculator Tabs ──────────────────────────────────────────────────── */
+.fuel-tab-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 0;
+    border-radius: 2px;
+    color: #475569;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.fuel-tab-btn:hover {
+    color: #94a3b8;
+}
+
+.fuel-tab-btn.active {
+    background: rgba(14, 165, 233, 0.15);
+    color: #0ea5e9;
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.05);
+}

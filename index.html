@@ -39,6 +39,7 @@
             </div>
 
             <div class="flex gap-4 items-center">
+
                 <div class="mode-toggle flex bg-panel-alt rounded p-0.5 border border-white border-opacity-5">
                     <button id="modeBasic"
                         class="px-3 py-1 rounded text-[10px] font-bold tracking-widest transition-all duration-300">BASIC</button>
@@ -233,10 +234,8 @@
                     </div>
                     <div class="section-content p-3 space-y-4">
                         <div class="flex gap-1 bg-slate-900/50 p-1 rounded-sm">
-                            <button id="fuelModeTime"
-                                class="flex-1 text-[10px] font-bold py-1 rounded-sm bg-blue-500/20 text-blue-400 border border-blue-500/30 transition-all">TIME</button>
-                            <button id="fuelModeLaps"
-                                class="flex-1 text-[10px] font-bold py-1 rounded-sm text-slate-500 hover:text-slate-300 transition-all">LAPS</button>
+                            <button id="fuelModeTime" class="fuel-tab-btn active">TIME</button>
+                            <button id="fuelModeLaps" class="fuel-tab-btn">LAPS</button>
                         </div>
 
                         <div class="space-y-3">
@@ -245,22 +244,59 @@
                                     <div class="flex-1">
                                         <label
                                             class="text-[8px] text-slate-500 uppercase font-bold block mb-1">Hours</label>
-                                        <input type="number" id="fuelHours" value="1" min="0"
-                                            class="w-full bg-slate-950 border border-white/5 rounded-sm px-2 py-1 text-[10px] focus:border-blue-500/50 transition-colors">
+                                        <div class="spin-container w-full">
+                                            <button type="button" class="spin-btn step-down" tabindex="-1"><svg
+                                                    width="10" height="10" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                            <input type="number" id="fuelHours" value="1" min="0" class="spin-input">
+                                            <button type="button" class="spin-btn step-up" tabindex="-1"><svg width="10"
+                                                    height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2.5">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                        </div>
                                     </div>
                                     <div class="flex-1">
                                         <label
                                             class="text-[8px] text-slate-500 uppercase font-bold block mb-1">Minutes</label>
-                                        <input type="number" id="fuelMinutes" value="0" min="0" max="59"
-                                            class="w-full bg-slate-950 border border-white/5 rounded-sm px-2 py-1 text-[10px] focus:border-blue-500/50 transition-colors">
+                                        <div class="spin-container w-full">
+                                            <button type="button" class="spin-btn step-down" tabindex="-1"><svg
+                                                    width="10" height="10" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                            <input type="number" id="fuelMinutes" value="0" min="0" max="59"
+                                                class="spin-input">
+                                            <button type="button" class="spin-btn step-up" tabindex="-1"><svg width="10"
+                                                    height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2.5">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="fuelLapsInput" class="hidden transition-all">
                                 <label class="text-[8px] text-slate-500 uppercase font-bold block mb-1">Total
                                     Laps</label>
-                                <input type="number" id="fuelTotalLaps" value="50" min="1"
-                                    class="w-full bg-slate-950 border border-white/5 rounded-sm px-2 py-1 text-[10px] focus:border-blue-500/50 transition-colors">
+                                <div class="spin-container w-full">
+                                    <button type="button" class="spin-btn step-down" tabindex="-1"><svg width="10"
+                                            height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg></button>
+                                    <input type="number" id="fuelTotalLaps" value="50" min="1" class="spin-input">
+                                    <button type="button" class="spin-btn step-up" tabindex="-1"><svg width="10"
+                                            height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg></button>
+                                </div>
                             </div>
 
                             <div class="space-y-3">
@@ -268,23 +304,73 @@
                                     <label class="text-[8px] text-slate-500 uppercase font-bold block mb-1">Lap Time
                                         (M:S.ms)</label>
                                     <div class="flex gap-1 items-center">
-                                        <input type="number" id="fuelLapMin" value="2" min="0" placeholder="M"
-                                            class="w-12 bg-slate-950 border border-white/5 rounded-sm px-1 py-1 text-[10px] focus:border-blue-500/50 transition-colors text-center font-mono">
+                                        <div class="spin-container w-16">
+                                            <button type="button" class="spin-btn step-down px-0 w-4" tabindex="-1"><svg
+                                                    width="8" height="8" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                            <input type="number" id="fuelLapMin" value="2" min="0" placeholder="M"
+                                                class="spin-input font-mono">
+                                            <button type="button" class="spin-btn step-up px-0 w-4" tabindex="-1"><svg
+                                                    width="8" height="8" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                        </div>
                                         <span class="text-slate-600 font-bold">:</span>
-                                        <input type="number" id="fuelLapSec" value="00" min="0" max="59"
-                                            placeholder="SS"
-                                            class="w-12 bg-slate-950 border border-white/5 rounded-sm px-1 py-1 text-[10px] focus:border-blue-500/50 transition-colors text-center font-mono">
+                                        <div class="spin-container w-16">
+                                            <button type="button" class="spin-btn step-down px-0 w-4" tabindex="-1"><svg
+                                                    width="8" height="8" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                            <input type="number" id="fuelLapSec" value="00" min="0" max="59"
+                                                placeholder="SS" class="spin-input font-mono">
+                                            <button type="button" class="spin-btn step-up px-0 w-4" tabindex="-1"><svg
+                                                    width="8" height="8" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                        </div>
                                         <span class="text-slate-600 font-bold">.</span>
-                                        <input type="number" id="fuelLapMs" value="000" min="0" max="999"
-                                            placeholder="ms"
-                                            class="w-16 bg-slate-950 border border-white/5 rounded-sm px-1 py-1 text-[10px] focus:border-blue-500/50 transition-colors text-center font-mono">
+                                        <div class="spin-container w-[72px]">
+                                            <button type="button" class="spin-btn step-down px-0 w-4" tabindex="-1"><svg
+                                                    width="8" height="8" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                            <input type="number" id="fuelLapMs" value="000" min="0" max="999"
+                                                placeholder="ms" class="spin-input font-mono" step="10">
+                                            <button type="button" class="spin-btn step-up px-0 w-4" tabindex="-1"><svg
+                                                    width="8" height="8" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="w-full">
                                     <label class="text-[8px] text-slate-500 uppercase font-bold block mb-1">Fuel /
                                         Lap</label>
-                                    <input type="number" id="fuelPerLapInput" value="3.5" min="0.1" step="0.1"
-                                        class="w-full bg-slate-950 border border-white/5 rounded-sm px-2 py-1 text-[10px] focus:border-blue-500/50 transition-colors">
+                                    <div class="spin-container w-full">
+                                        <button type="button" class="spin-btn step-down" tabindex="-1"><svg width="10"
+                                                height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            </svg></button>
+                                        <input type="number" id="fuelPerLapInput" value="3.5" min="0.1" step="0.1"
+                                            class="spin-input">
+                                        <button type="button" class="spin-btn step-up" tabindex="-1"><svg width="10"
+                                                height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2.5">
+                                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            </svg></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1028,19 +1114,19 @@
         </div>
     </div>
 
-    <script src="js/cars/lmgt3/aston_martin_vantage_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/porsche_911_gt3_r_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/bmw_m4_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/chevrolet_corvette_Z06_r.js"></script>
-    <script src="js/cars/lmgt3/ferrari_296_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/ford_mustang_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/lexus_rcf_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/mclaren_720s_lmgt3_evo.js"></script>
-    <script src="js/cars/lmgt3/mercedes_amg_lmgt3.js"></script>
-    <script src="js/cars/lmgt3/lamborghini_huracan_lmgt3_evo2.js"></script>
-    <script src="js/cars/lmp2/oreca_07_gibson_lmp2.js"></script>
-    <script src="js/cars/lmp3/ligier_js_p325_lmp3.js"></script>
-    <script src="js/cars/lmp3/ginetta_g61_lmp3.js"></script>
+    <script src="js/cars/lmu/lmgt3/aston_martin_vantage_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/porsche_911_gt3_r_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/bmw_m4_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/chevrolet_corvette_Z06_r.js"></script>
+    <script src="js/cars/lmu/lmgt3/ferrari_296_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/ford_mustang_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/lexus_rcf_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/mclaren_720s_lmgt3_evo.js"></script>
+    <script src="js/cars/lmu/lmgt3/mercedes_amg_lmgt3.js"></script>
+    <script src="js/cars/lmu/lmgt3/lamborghini_huracan_lmgt3_evo2.js"></script>
+    <script src="js/cars/lmu/lmp2/oreca_07_gibson_lmp2.js"></script>
+    <script src="js/cars/lmu/lmp3/ligier_js_p325_lmp3.js"></script>
+    <script src="js/cars/lmu/lmp3/ginetta_g61_lmp3.js"></script>
     <div id="setup-tooltip"
         class="fixed hidden z-[9999] pointer-events-none w-64 p-3 bg-panel-alt border border-white/10 rounded shadow-2xl backdrop-blur-md transition-opacity duration-200 opacity-0">
         <div class="flex flex-col gap-2">
@@ -1065,7 +1151,11 @@
     <script src="js/formulas.js"></script>
     <script src="js/setup_service.js"></script>
     <script src="js/utils.js"></script>
-    <script src="js/physics.js"></script>
+    <script src="js/ui_setup.js"></script>
+    <script src="js/tracks_manager.js"></script>
+    <script src="js/tooltips.js"></script>
+    <script src="js/fuel_calculator.js"></script>
+    <script src="js/ui_updater.js"></script>
     <script src="js/app.js"></script>
 </body>
 
