@@ -354,9 +354,9 @@ function initAppInteractions() {
 async function initPhysics() {
     try {
         const [lmgt3Res, lmp2Res, lmp3Res] = await Promise.all([
-            fetch('js/cars/lmu/lmgt3/physics_lmgt3.json'),
-            fetch('js/cars/lmu/lmp2/physics_lmp2.json'),
-            fetch('js/cars/lmu/lmp3/physics_lmp3.json')
+            fetch('js/lmu/cars/lmgt3/physics_lmgt3.json'),
+            fetch('js/lmu/cars/lmp2/physics_lmp2.json'),
+            fetch('js/lmu/cars/lmp3/physics_lmp3.json')
         ]);
 
         const lmgt3Data = await lmgt3Res.json();

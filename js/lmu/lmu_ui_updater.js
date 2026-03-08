@@ -24,7 +24,8 @@ function update() {
     const DEFAULTS = window.DEFAULTS || {};
     const PHYSICS_DATA = window.PHYSICS_DATA;
     const SELECTED_TRACK_ID = window.SELECTED_TRACK_ID;
-    const { clamp, getPt, shapeDamp, getThermalGrip, getStandardizedDelta, getPhysVal } = window.LMA_Formulas || {};
+    const { clamp, getPt, shapeDamp } = window.LMA_Formulas || {};
+    const { getThermalGrip, getStandardizedDelta, getPhysVal } = window.LMU_Formulas || {};
 
 
 
