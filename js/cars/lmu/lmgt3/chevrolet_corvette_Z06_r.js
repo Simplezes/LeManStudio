@@ -8,7 +8,7 @@ window.CARS["chevrolet_corvette_Z06_r"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 51.5 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: ["Open", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "Closed"].map((label, i) => ({ label, value: i * 0.1 })),
@@ -77,16 +77,16 @@ window.CARS["chevrolet_corvette_Z06_r"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 1.5, fh: 5.2, rh: 5.5, farb: 8, rarb: 1, bias: 51.1 }
+            values: { wing: 1.5, fh: 5.2, rh: 5.5, farb: 8, rarb: 1 }
         },
         "High Downforce": {
-            values: { wing: 6.5, fh: 5.5, rh: 7.5, farb: 18, rarb: 4, bias: 52.9 }
+            values: { wing: 6.5, fh: 5.5, rh: 7.5, farb: 18, rarb: 4 }
         },
         "Understeer": {
-            values: { farb: 25, rarb: 1, fs: 3, rs: 1, fh: 5.4, rh: 6.0, bias: 56.5, wing: 4.5 }
+            values: { farb: 25, rarb: 1, fs: 3, rs: 1, fh: 5.4, rh: 6.0, wing: 4.5 }
         },
         "Oversteer": {
-            values: { farb: 5, rarb: 12, fs: 2, rs: 5, fh: 5.2, rh: 8.5, bias: 48.4, wing: 2.5 }
+            values: { farb: 5, rarb: 12, fs: 2, rs: 5, fh: 5.2, rh: 8.5, wing: 2.5 }
         }
     }
 };

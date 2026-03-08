@@ -7,7 +7,7 @@ window.CARS["oreca_07_gibson_lmp2"] = {
             group: "Tires & Brakes",
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 166, step: 1, default: 136 }, { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 166, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 47.8, max: 60.0, step: 0.5, default: 52.3 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -105,19 +105,19 @@ window.CARS["oreca_07_gibson_lmp2"] = {
     presets: {
         "Low Downforce": {
             desc: "Minimal wing and low ride height for maximum straight-line speed at Le Mans or Monza.",
-            values: { wing: 1, fh: 4.4, rh: 5.5, farb: 5, rarb: 0, bias: 52.3, ftoe: -0.04, rtoe: 0.14, fcam: -1.7, rcam: -1.1, fs: 1, rs: 2 }
+            values: { wing: 1, fh: 4.4, rh: 5.5, farb: 5, rarb: 0, ftoe: -0.04, rtoe: 0.14, fcam: -1.7, rcam: -1.1, fs: 1, rs: 2 }
         },
         "High Downforce": {
             desc: "Aggressive wing and balanced rake for maximum cornering speed and technical circuits.",
-            values: { wing: 8, fh: 4.6, rh: 7.5, farb: 3, rarb: 4, bias: 53.8, ftoe: -0.10, rtoe: 0.26, fcam: -2.3, rcam: -1.3, fs: 2, rs: 1 }
+            values: { wing: 8, fh: 4.6, rh: 7.5, farb: 3, rarb: 4, ftoe: -0.10, rtoe: 0.26, fcam: -2.3, rcam: -1.3, fs: 2, rs: 1 }
         },
         "Understeer": {
-            desc: "Safety-first setup. Stiff front and forward bias makes the car highly stable and predictable.",
-            values: { farb: 10, rarb: 0, fs: 3, rs: 0, fh: 4.6, rh: 6.8, bias: 55.3, wing: 5, ftoe: -0.04, rtoe: 0.26, fcam: -2.0, rcam: -1.1 }
+            desc: "Safety-first setup. Stiff front makes the car highly stable and predictable.",
+            values: { farb: 10, rarb: 0, fs: 3, rs: 0, fh: 4.6, rh: 6.8, wing: 5, ftoe: -0.04, rtoe: 0.26, fcam: -2.0, rcam: -1.1 }
         },
         "Oversteer": {
             desc: "Pivot-focused setup. Stiff rear and high rake allows the car to rotate aggressively on corner entry.",
-            values: { farb: 0, rarb: 8, fs: 0, rs: 3, fh: 4.4, rh: 8.0, bias: 48.8, wing: 2, ftoe: -0.16, rtoe: 0.14, fcam: -2.4, rcam: -1.3 }
+            values: { farb: 0, rarb: 8, fs: 0, rs: 3, fh: 4.4, rh: 8.0, wing: 2, ftoe: -0.16, rtoe: 0.14, fcam: -2.4, rcam: -1.3 }
         }
     }
 };

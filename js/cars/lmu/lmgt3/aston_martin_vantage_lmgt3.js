@@ -8,7 +8,7 @@ window.CARS["aston_martin_vantage_lmgt3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 49.5 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: ["Open", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "Closed"].map((label, i) => ({ label, value: i * 0.1 })),
@@ -60,19 +60,19 @@ window.CARS["aston_martin_vantage_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 5.0, fh: 5.3, rh: 6.4, fs: 5, rs: 3, farb: 5, rarb: 3, ftoe: -0.06, rtoe: 0.20, fcam: -2.2, rcam: -1.5, bias: 49.0 }
+            values: { wing: 5.0, fh: 5.3, rh: 6.4, fs: 5, rs: 3, farb: 5, rarb: 3, ftoe: -0.06, rtoe: 0.20, fcam: -2.2, rcam: -1.5 }
         },
 
         "High Downforce": {
-            values: { wing: 11.0, fh: 5.6, rh: 7.4, fs: 6, rs: 4, farb: 7, rarb: 3, ftoe: -0.06, rtoe: 0.25, fcam: -2.4, rcam: -1.7, bias: 49.5 }
+            values: { wing: 11.0, fh: 5.6, rh: 7.4, fs: 6, rs: 4, farb: 7, rarb: 3, ftoe: -0.06, rtoe: 0.25, fcam: -2.4, rcam: -1.7 }
         },
 
         "Understeer": {
-            values: { wing: 10.0, fs: 6, rs: 2, farb: 9, rarb: 1, ftoe: 0.00, rtoe: 0.30, fcam: -1.9, rcam: -1.3, bias: 50.5 }
+            values: { wing: 10.0, fs: 6, rs: 2, farb: 9, rarb: 1, ftoe: 0.00, rtoe: 0.30, fcam: -1.9, rcam: -1.3 }
         },
 
         "Oversteer": {
-            values: { wing: 6.0, fs: 3, rs: 5, farb: 4, rarb: 6, ftoe: -0.12, rtoe: 0.15, fcam: -2.6, rcam: -1.9, bias: 48.5 }
+            values: { wing: 6.0, fs: 3, rs: 5, farb: 4, rarb: 6, ftoe: -0.12, rtoe: 0.15, fcam: -2.6, rcam: -1.9 }
         }
     }
 };

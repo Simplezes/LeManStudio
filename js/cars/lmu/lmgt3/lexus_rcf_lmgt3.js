@@ -8,7 +8,7 @@ window.CARS["lexus_rcf_lmgt3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 51.5 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -79,16 +79,16 @@ window.CARS["lexus_rcf_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 7.0, fh: 5.0, rh: 5.2, farb: 3, rarb: 2, bias: 50.5 }
+            values: { wing: 7.0, fh: 5.0, rh: 5.2, farb: 3, rarb: 2 }
         },
         "High Downforce": {
             values: { wing: 13.0, fh: 5.5, rh: 7.0, farb: 5, rarb: 4, fs: 5, rs: 4 }
         },
         "Understeer": {
-            values: { farb: 7, rarb: 1, fs: 5, rs: 1, fh: 5.4, rh: 5.6, bias: 55.6, wing: 11.0 }
+            values: { farb: 7, rarb: 1, fs: 5, rs: 1, fh: 5.4, rh: 5.6, wing: 11.0 }
         },
         "Oversteer": {
-            values: { farb: 1, rarb: 7, fs: 2, rs: 5, fh: 5.0, rh: 8.5, bias: 48.1, wing: 8.0 }
+            values: { farb: 1, rarb: 7, fs: 2, rs: 5, fh: 5.0, rh: 8.5, wing: 8.0 }
         }
     },
 };

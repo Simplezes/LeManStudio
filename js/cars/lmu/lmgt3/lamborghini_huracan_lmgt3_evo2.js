@@ -8,7 +8,7 @@ window.CARS["lamborghini_huracan_lmgt3_evo2"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 52.8 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -89,16 +89,16 @@ window.CARS["lamborghini_huracan_lmgt3_evo2"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 4.0, fh: 5.0, rh: 5.9, farb: 6, rarb: 3, bias: 51.4 }
+            values: { wing: 4.0, fh: 5.0, rh: 5.9, farb: 6, rarb: 3 }
         },
         "High Downforce": {
-            values: { wing: 8.0, fh: 5.5, rh: 7.0, farb: 14, rarb: 5, bias: 52.9 }
+            values: { wing: 8.0, fh: 5.5, rh: 7.0, farb: 14, rarb: 5 }
         },
         "Understeer": {
-            values: { farb: 18, rarb: 1, fs: 6, rs: 6, fh: 5.4, rh: 5.9, bias: 56.5, wing: 6.0 }
+            values: { farb: 18, rarb: 1, fs: 6, rs: 6, fh: 5.4, rh: 5.9, wing: 6.0 }
         },
         "Oversteer": {
-            values: { farb: 4, rarb: 5, fs: 6, rs: 6, fh: 5.0, rh: 8.5, bias: 48.1, wing: 5.0 }
+            values: { farb: 4, rarb: 5, fs: 6, rs: 6, fh: 5.0, rh: 8.5, wing: 5.0 }
         }
     }
 };

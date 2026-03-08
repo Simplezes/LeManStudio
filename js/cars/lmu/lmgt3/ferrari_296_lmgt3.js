@@ -8,7 +8,7 @@ window.CARS["ferrari_296_lmgt3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 44.5, max: 57.0, step: 0.25, default: 52.2 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -74,16 +74,16 @@ window.CARS["ferrari_296_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 0.6, fh: 5.0, rh: 5.2, farb: 3, rarb: 3, bias: 51.4 }
+            values: { wing: 0.6, fh: 5.0, rh: 5.2, farb: 3, rarb: 3 }
         },
         "High Downforce": {
             values: { wing: 4.5, fh: 5.5, rh: 7.0, farb: 5, rarb: 4, fs: 6, rs: 5 }
         },
         "Understeer": {
-            values: { farb: 7, rarb: 2, fs: 8, rs: 2, fh: 5.2, rh: 5.5, bias: 55.0, wing: 3.85 }
+            values: { farb: 7, rarb: 2, fs: 8, rs: 2, fh: 5.2, rh: 5.5, wing: 3.85 }
         },
         "Oversteer": {
-            values: { farb: 2, rarb: 7, fs: 4, rs: 7, fh: 5.0, rh: 7.5, bias: 49.0, wing: 1.9 }
+            values: { farb: 2, rarb: 7, fs: 4, rs: 7, fh: 5.0, rh: 7.5, wing: 1.9 }
         }
     }
 };

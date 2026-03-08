@@ -8,7 +8,7 @@ window.CARS["ligier_js_p325_lmp3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 150, max: 196, step: 1, default: 150 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 130, max: 176, step: 1, default: 130 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 35.0, max: 65.0, step: 0.25, default: 50.0 },
+
 
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
@@ -151,19 +151,19 @@ window.CARS["ligier_js_p325_lmp3"] = {
     presets: {
         "Low Downforce": {
             desc: "Flat-wing, low-rake setup for high-speed circuits like Le Mans or Monza. Maximises top speed on long straights.",
-            values: { wing: 2.5, fh: 42.0, rh: 55.0, fs: 700, rs: 700, farb: 3, rarb: 1, bias: 49.5 }
+            values: { wing: 2.5, fh: 42.0, rh: 55.0, fs: 700, rs: 700, farb: 3, rarb: 1 }
         },
         "High Downforce": {
             desc: "Aggressive wing and high rake for maximum cornering grip on technical circuits.",
-            values: { wing: 14.5, fh: 46.0, rh: 78.0, fs: 900, rs: 900, farb: 5, rarb: 4, bias: 50.5 }
+            values: { wing: 14.5, fh: 46.0, rh: 78.0, fs: 900, rs: 900, farb: 5, rarb: 4 }
         },
         "Understeer": {
             desc: "Safety-first balance. Stiff front ARB and forward rake locks the front end for stable, predictable cornering.",
-            values: { wing: 10.5, fh: 44.0, rh: 72.0, fs: 1100, rs: 750, farb: 7, rarb: 1, bias: 53.5, ftoe: 0.0, rtoe: 0.352 }
+            values: { wing: 10.5, fh: 44.0, rh: 72.0, fs: 1100, rs: 750, farb: 7, rarb: 1, ftoe: 0.0, rtoe: 0.352 }
         },
         "Oversteer": {
             desc: "Rotation-focused setup. Stiff rear and high rake helps the car pivot aggressively on entry.",
-            values: { wing: 8.5, fh: 40.0, rh: 82.0, fs: 750, rs: 1100, farb: 1, rarb: 5, bias: 47.0, ftoe: -0.176, rtoe: 0.176 }
+            values: { wing: 8.5, fh: 40.0, rh: 82.0, fs: 750, rs: 1100, farb: 1, rarb: 5, ftoe: -0.176, rtoe: 0.176 }
         }
     }
 };

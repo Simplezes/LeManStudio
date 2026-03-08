@@ -8,7 +8,7 @@ window.CARS["ford_mustang_lmgt3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 52.0 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -92,16 +92,16 @@ window.CARS["ford_mustang_lmgt3"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 0.0, fh: 5.0, rh: 5.2, farb: 2, rarb: 2, bias: 51.4 }
+            values: { wing: 0.0, fh: 5.0, rh: 5.2, farb: 2, rarb: 2 }
         },
         "High Downforce": {
             values: { wing: 7.0, fh: 5.5, rh: 7.5, farb: 6, rarb: 4, fs: 4, rs: 3 }
         },
         "Understeer": {
-            values: { farb: 8, rarb: 1, fs: 8, rs: 1, fh: 5.5, rh: 5.8, bias: 54.4, wing: 5.0 }
+            values: { farb: 8, rarb: 1, fs: 8, rs: 1, fh: 5.5, rh: 5.8, wing: 5.0 }
         },
         "Oversteer": {
-            values: { farb: 1, rarb: 8, fs: 1, rs: 6, fh: 5.0, rh: 9.0, bias: 48.1, wing: 2.0 }
+            values: { farb: 1, rarb: 8, fs: 1, rs: 6, fh: 5.0, rh: 9.0, wing: 2.0 }
         }
     }
 };

@@ -5,7 +5,7 @@ window.LMA_UI = {
         tpressure_r: document.getElementById('tpressure_r'),
         fcam: document.getElementById('fcam'),
         rcam: document.getElementById('rcam'),
-        bias: document.getElementById('bias'),
+
         fbd: document.getElementById('fbd'),
         rbd: document.getElementById('rbd'),
         fs: document.getElementById('fs'),
@@ -59,7 +59,7 @@ window.LMA_UI = {
         rcV: document.getElementById('rcV'),
         fbdV: document.getElementById('fbdV'),
         rbdV: document.getElementById('rbdV'),
-        bV: document.getElementById('bV'),
+
         fsV: document.getElementById('fsV'),
         rsV: document.getElementById('rsV'),
         fpkV: document.getElementById('fpkV'),
@@ -85,7 +85,7 @@ window.LMA_UI = {
         third_RspringV: document.getElementById('third_RspringV'),
         third_rpkV: document.getElementById('third_rpkV'),
         rakeV: document.getElementById('rakeV'),
-        recoBias: document.getElementById('recoBias'),
+
 
         // Labels / Containers
         tp_fC_label: document.getElementById('tp_fC_label'),
@@ -94,7 +94,7 @@ window.LMA_UI = {
         rcC_label: document.getElementById('rcC_label'),
         fbdC_label: document.getElementById('fbdC_label'),
         rbdC_label: document.getElementById('rbdC_label'),
-        bC_label: document.getElementById('bC_label'),
+
         fsC_label: document.getElementById('fsC_label'),
         rsC_label: document.getElementById('rsC_label'),
         fpkC_label: document.getElementById('fpkC_label'),
@@ -188,7 +188,7 @@ window.LMA_UI = {
         rP: document.getElementById('rP'),
         steerStatus: document.getElementById('steerStatus'),
         linkTiresBtn: document.getElementById('linkTiresBtn'),
-        sync: document.getElementById('sync'),
+
         saveSetupBtn: document.getElementById('saveSetupBtn'),
         deleteSetupBtn: document.getElementById('deleteSetupBtn'),
         presetContainer: document.getElementById('presetContainer')

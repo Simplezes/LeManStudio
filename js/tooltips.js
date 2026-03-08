@@ -59,18 +59,8 @@ const TOOLTIP_DATA = {
         inc: 'Increases rear tire temperature, helping with warm-up. Reduces drag.',
         dec: 'Reduces rear brake/tire temperatures at the cost of slight drag increase.'
     },
-    'bias': {
-        title: 'Brake Bias',
-        desc: 'The distribution of braking force between the front and rear axles, heavily influencing stability and turn-in.',
-        inc: 'Shifting bias forward (+) provides stable, predictable braking in straights but causes severe understeer (plow) into corners as the front tires lock up early.',
-        dec: 'Shifting bias rearward (-) makes the car agile and easy to rotate into corners but becomes unstable and squirrelly, with high risk of rear-end oversteer and spin (especially when trail braking).'
-    },
-    'b': {
-        title: 'Brake Bias',
-        desc: 'The distribution of braking force between the front and rear axles, heavily influencing stability and turn-in.',
-        inc: 'Shifting bias forward (+) provides stable, predictable braking in straights but causes severe understeer (plow) into corners as the front tires lock up early.',
-        dec: 'Shifting bias rearward (-) makes the car agile and easy to rotate into corners but becomes unstable and squirrelly, with high risk of rear-end oversteer and spin (especially when trail braking).'
-    },
+
+
     'fs': {
         title: 'Front Springs',
         desc: 'Determines the stiffness of the front suspension.',

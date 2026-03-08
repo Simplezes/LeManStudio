@@ -8,7 +8,7 @@ window.CARS["mclaren_720s_lmgt3_evo"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 52.5 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -98,16 +98,16 @@ window.CARS["mclaren_720s_lmgt3_evo"] = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: 5.4, fh: 5.0, rh: 5.9, farb: 4, rarb: 3, bias: 51.1 }
+            values: { wing: 5.4, fh: 5.0, rh: 5.9, farb: 4, rarb: 3 }
         },
         "High Downforce": {
             values: { wing: 10.5, fh: 5.6, rh: 7.5, farb: 8, rarb: 5, fs: 5, rs: 5 }
         },
         "Understeer": {
-            values: { farb: 10, rarb: 1, fs: 5, rs: 1, fh: 5.6, rh: 6.0, bias: 55.9, wing: 9.0 }
+            values: { farb: 10, rarb: 1, fs: 5, rs: 1, fh: 5.6, rh: 6.0, wing: 9.0 }
         },
         "Oversteer": {
-            values: { farb: 3, rarb: 10, fs: 2, rs: 6, fh: 5.0, rh: 8.8, bias: 48.1, wing: 6.0 }
+            values: { farb: 3, rarb: 10, fs: 2, rs: 6, fh: 5.0, rh: 8.8, wing: 6.0 }
         }
     }
 };

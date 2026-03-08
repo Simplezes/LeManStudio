@@ -22,7 +22,7 @@ window.CARS["car_id_here"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 130, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 130, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 40.0, max: 60.0, step: 0.25, default: 50.0 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -107,7 +107,7 @@ window.CARS["car_id_here"] = {
             desc: "The standard factory setup as a baseline.",
             values: {
                 // Group 1
-                tpressure_f: 136, tpressure_r: 136, bias: 50.0, fbd: 0, rbd: 0,
+                tpressure_f: 136, tpressure_r: 136, fbd: 0, rbd: 0,
                 // Group 2
                 fh: 5.0, rh: 6.0, fs: 5, rs: 5, fpk: 0.0, rpk: 0.0, farb: 2, rarb: 2,
                 // Group 3

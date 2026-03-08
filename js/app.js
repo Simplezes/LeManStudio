@@ -209,10 +209,7 @@ function initAppInteractions() {
 
     if (els.sync) {
         els.sync.onclick = () => {
-            if (els.bias) {
-                els.bias.value = window.targetB || window.DEFAULTS.bias;
-                if (window.updateSliderFill) window.updateSliderFill(els.bias);
-            }
+
             if (window.update) window.update();
         };
     }
@@ -315,7 +312,7 @@ function initAppInteractions() {
     });
 
     const resetMap = {
-        tp_fC_label: 'tpressure_f', tp_rC_label: 'tpressure_r', fcC_label: 'fcam', rcC_label: 'rcam', bC_label: 'bias',
+        tp_fC_label: 'tpressure_f', tp_rC_label: 'tpressure_r', fcC_label: 'fcam', rcC_label: 'rcam',
         fbdC_label: 'fbd', rbdC_label: 'rbd',
         fsC_label: 'fs', rsC_label: 'rs', fpkC_label: 'fpk', rpkC_label: 'rpk', fhC_label: 'fh', rhC_label: 'rh',
         third_FspringC_label: 'third_Fspring', third_fpkC_label: 'third_fpk', third_RspringC_label: 'third_Rspring', third_rpkC_label: 'third_rpk',

@@ -8,7 +8,7 @@ window.CARS["ginetta_g61_lmp3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 150, max: 196, step: 1, default: 150 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 150, max: 196, step: 1, default: 150 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 35.0, max: 65.0, step: 0.25, default: 51.5 },
+
 
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
@@ -87,19 +87,19 @@ window.CARS["ginetta_g61_lmp3"] = {
     presets: {
         "Low Downforce": {
             desc: "Minimal wing and low-rake for high-speed circuits. Trades cornering grip for straight-line speed.",
-            values: { wing: 2.5, fh: 43.0, rh: 57.0, fs: 175, rs: 245, farb: 2, rarb: 0, bias: 50.0 }
+            values: { wing: 2.5, fh: 43.0, rh: 57.0, fs: 175, rs: 245, farb: 2, rarb: 0 }
         },
         "High Downforce": {
             desc: "High rake and aggressive wing for maximum mechanical grip on technical circuits.",
-            values: { wing: 14.5, fh: 47.0, rh: 76.0, fs: 211, rs: 295, farb: 4, rarb: 3, bias: 51.5 }
+            values: { wing: 14.5, fh: 47.0, rh: 76.0, fs: 211, rs: 295, farb: 4, rarb: 3 }
         },
         "Understeer": {
-            desc: "Stable, safe balance for endurance stints. Stiff front ARB and forward bias keeps the front planted.",
-            values: { wing: 11.5, fh: 45.0, rh: 68.0, fs: 228, rs: 245, farb: 6, rarb: 0, bias: 53.0 }
+            desc: "Stable, safe balance for endurance stints. Stiff front ARB keeps the front planted.",
+            values: { wing: 11.5, fh: 45.0, rh: 68.0, fs: 228, rs: 245, farb: 6, rarb: 0 }
         },
         "Oversteer": {
             desc: "High rear load and soft front for aggressive rotation on corner entry.",
-            values: { wing: 9.5, fh: 43.0, rh: 80.0, fs: 175, rs: 320, farb: 1, rarb: 4, bias: 48.5 }
+            values: { wing: 9.5, fh: 43.0, rh: 80.0, fs: 175, rs: 320, farb: 1, rarb: 4 }
         }
     }
 };

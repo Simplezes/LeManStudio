@@ -8,7 +8,7 @@ window.CARS["porsche_911_gt3_r_lmgt3"] = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 48.8 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [
@@ -82,11 +82,11 @@ window.CARS["porsche_911_gt3_r_lmgt3"] = {
         },
 
         "Understeer": {
-            values: { wing: 11.3, fs: 8, rs: 2, farb: 6, rarb: 1, ftoe: 0.00, rtoe: 0.30, fcam: -1.9, rcam: -1.4, bias: 50.0 }
+            values: { wing: 11.3, fs: 8, rs: 2, farb: 6, rarb: 1, ftoe: 0.00, rtoe: 0.30, fcam: -1.9, rcam: -1.4 }
         },
 
         "Oversteer": {
-            values: { wing: 7.3, fs: 4, rs: 5, farb: 3, rarb: 3, ftoe: -0.12, rtoe: 0.15, fcam: -2.4, rcam: -1.8, bias: 47.5 }
+            values: { wing: 7.3, fs: 4, rs: 5, farb: 3, rarb: 3, ftoe: -0.12, rtoe: 0.15, fcam: -2.4, rcam: -1.8 }
         }
     }
 };

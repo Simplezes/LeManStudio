@@ -26,7 +26,7 @@ function update() {
     const SELECTED_TRACK_ID = window.SELECTED_TRACK_ID;
     const { clamp, getPt, shapeDamp, getThermalGrip, getStandardizedDelta, getPhysVal } = window.LMA_Formulas || {};
 
-    let targetB = DEFAULTS.bias || 50;
+
 
     const getItemConfig = (id) => window.LMA_Utils ? window.LMA_Utils.getItemConfig(CAR, id) : null;
     const getParamRange = (id) => window.LMA_Utils ? window.LMA_Utils.getParamRange(CAR, id) : { min: 0, max: 100, step: 1 };
@@ -94,7 +94,7 @@ function update() {
     setLabel('tp_r', vals.tpressure_r, 'tpressure_r');
     setLabel('fc', vals.fcam, 'fcam');
     setLabel('rc', vals.rcam, 'rcam');
-    if (els.bV) els.bV.innerText = `${(100 - vals.bias).toFixed(1)}:${vals.bias.toFixed(1)}%`;
+
 
     setLabel('fbd', vals.fbd);
     setLabel('rbd', vals.rbd);
@@ -148,25 +148,6 @@ function update() {
     }
     if (els.rakeV) els.rakeV.innerText = `${rake >= 0 ? '+' : ''}${rake.toFixed(rakeDecimals)}${rhUnit}`;
 
-    const defRake = DEFAULTS.rh - DEFAULTS.fh;
-    const rhRange = getParamRange('rh');
-    const fhRange = getParamRange('fh');
-    const maxPossibleRake = rhRange.max - fhRange.min;
-    const minPossibleRake = rhRange.min - fhRange.max;
-    const rakeSpan = Math.abs(maxPossibleRake - minPossibleRake) || 1;
-    const nRakeDelta = ((rake - defRake) / rakeSpan);
-    const wingRange = getParamRange('wing');
-    const wingSpan = Math.abs(wingRange.max - wingRange.min) || 1;
-    const nWingDelta = (vals.wing - DEFAULTS.wing) / wingSpan;
-    const bRange = getParamRange('bias');
-    const biasSpan = Math.abs(bRange.max - bRange.min) || 1;
-    targetB = DEFAULTS.bias
-        + nRakeDelta * (biasSpan * 0.20)
-        - nWingDelta * (biasSpan * 0.08);
-    targetB = Math.round(targetB * 10) / 10;
-    targetB = Math.min(bRange.max, Math.max(bRange.min, targetB));
-    if (els.recoBias) els.recoBias.innerText = `${(100 - targetB).toFixed(1)}:${targetB.toFixed(1)}`;
-    window.targetB = targetB;
 
     if (window.GLOBAL_TRACKS && SELECTED_TRACK_ID) {
         let track = window.LMA_TracksManager ? window.LMA_TracksManager.getTrackData(SELECTED_TRACK_ID) : window.GLOBAL_TRACKS[SELECTED_TRACK_ID];

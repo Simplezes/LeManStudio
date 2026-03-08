@@ -8,7 +8,7 @@ window.CARS["bmw_m4_lmgt3"] = window.CAR_DATA = {
             items: [
                 { id: "tpressure_f", name: "Front Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
                 { id: "tpressure_r", name: "Rear Tire Pressure", type: "numeric", unit: "kPa", min: 136, max: 210, step: 1, default: 136 },
-                { id: "bias", name: "Brake Bias", type: "numeric", unit: "%", min: 43.0, max: 57.0, step: 0.25, default: 51.2 },
+
                 {
                     id: "fbd", name: "Front Brake Duct", type: "labeled",
                     options: [{ label: "Open", value: 0.0 }, { label: "33%", value: 0.33 }, { label: "67%", value: 0.67 }, { label: "Closed", value: 1.0 }],
@@ -64,16 +64,16 @@ window.CARS["bmw_m4_lmgt3"] = window.CAR_DATA = {
     ],
     presets: {
         "Low Downforce": {
-            values: { wing: -2.3, fh: 5.0, rh: 5.2, farb: 3, rarb: 3, bias: 50.5 }
+            values: { wing: -2.3, fh: 5.0, rh: 5.2, farb: 3, rarb: 3 }
         },
         "High Downforce": {
             values: { wing: 4.6, fh: 5.5, rh: 7.2, farb: 6, rarb: 4, fs: 4, rs: 3 }
         },
         "Understeer": {
-            values: { farb: 8, rarb: 1, fs: 5, rs: 1, fh: 5.2, rh: 5.5, bias: 54.4, wing: 3.7 }
+            values: { farb: 8, rarb: 1, fs: 5, rs: 1, fh: 5.2, rh: 5.5, wing: 3.7 }
         },
         "Oversteer": {
-            values: { farb: 1, rarb: 8, fs: 1, rs: 5, fh: 5.0, rh: 8.5, bias: 48.1, wing: 1.3 }
+            values: { farb: 1, rarb: 8, fs: 1, rs: 5, fh: 5.0, rh: 8.5, wing: 1.3 }
         }
     }
 };
