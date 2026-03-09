@@ -42,6 +42,14 @@ window.LMA_Setup = {
         const container = document.getElementById('presetContainer');
         if (!container) return;
         container.innerHTML = '';
+        container.dataset.activeType = 'factory';
+        container.dataset.activeIndex = -1;
+
+        const deleteBtn = document.getElementById('deleteSetupBtn');
+        if (deleteBtn) {
+            deleteBtn.classList.add('opacity-20', 'cursor-not-allowed');
+            deleteBtn.classList.remove('opacity-100', 'cursor-pointer');
+        }
 
         const createBtn = (title, subtitle, onClick, type = 'factory') => {
             const btn = document.createElement('button');
@@ -93,6 +101,22 @@ window.LMA_Setup = {
                 btn.style.background = `linear-gradient(90deg, ${accentColor}15, transparent)`;
                 btn.style.borderColor = accentColor;
                 btn.classList.add('active');
+
+                // Track active preset info for deletion
+                container.dataset.activeType = type;
+                container.dataset.activeIndex = type === 'saved' ? onClick.savedIndex : -1;
+
+                // Update delete button visual state
+                const deleteBtn = document.getElementById('deleteSetupBtn');
+                if (deleteBtn) {
+                    if (type === 'saved') {
+                        deleteBtn.classList.remove('opacity-20', 'cursor-not-allowed');
+                        deleteBtn.classList.add('opacity-100', 'cursor-pointer');
+                    } else {
+                        deleteBtn.classList.add('opacity-20', 'cursor-not-allowed');
+                        deleteBtn.classList.remove('opacity-100', 'cursor-pointer');
+                    }
+                }
             };
 
             return btn;
@@ -140,7 +164,7 @@ window.LMA_Setup = {
 
         saved.forEach((item, index) => {
             const dateStr = new Date(item.date).toLocaleDateString();
-            const btn = createBtn(item.name, dateStr, () => {
+            const onClick = () => {
                 Object.entries(item.setup).forEach(([id, val]) => {
                     if (els[id]) {
                         els[id].value = val;
@@ -148,7 +172,10 @@ window.LMA_Setup = {
                     }
                 });
                 if (window.update) window.update();
-            }, 'saved');
+            };
+            onClick.savedIndex = index;
+
+            const btn = createBtn(item.name, dateStr, onClick, 'saved');
             container.appendChild(btn);
         });
     }

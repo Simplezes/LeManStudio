@@ -72,16 +72,17 @@ function initUISetup() {
         if (window.LMA_Setup && typeof window.CAR !== 'undefined') {
             const presetContainer = document.getElementById('presetContainer');
             if (!presetContainer) return;
-            // Simplified logic: finds active saved preset index
-            let deleteIndex = -1;
-            const key = window.LMA_Setup.getStorageKey(window.CAR);
-            const saved = JSON.parse(localStorage.getItem(key) || '[]');
 
-            // Note: full implementation of delete logic depends on how the active preset is tracked
-            // The original code was: `deleteSavedSetup(index)` which we must recreate here.
-            // Assuming the active preset can be uniquely identified. For now, we will
-            // rely on the original logic if it existed, or prompt.
-            console.warn("Delete Setup logic delegated to main app temporarily");
+            const type = presetContainer.dataset.activeType;
+            const index = parseInt(presetContainer.dataset.activeIndex);
+
+            if (type === 'saved' && index >= 0) {
+                if (confirm("Are you sure you want to delete this setup?")) {
+                    window.LMA_Setup.deleteSavedSetup(window.CAR, index, els);
+                }
+            } else {
+                console.log("No saved setup selected for deletion");
+            }
         }
     };
 
