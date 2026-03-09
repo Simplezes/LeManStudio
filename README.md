@@ -1,24 +1,33 @@
-<p align="center">
-    <img src="img/icon_name.png" alt="LabSetup Icon">
-</p>
+<div align="center">
+    <img src="img/icon_name.png" alt="LapSetup Logo" style="width:60%">
+    <br>
+    <p>
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+        <img src="https://img.shields.io/badge/Made%20with-Vanilla%20JS-yellow.svg" alt="Vanilla JS">
+        <img src="https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38B2AC.svg" alt="Tailwind CSS">
+    </p>
+</div>
 
-### **LabSetup** is a web-based engineering suite designed to aid drivers in configuring their car setups for various racing simulations. It provides an intuitive, data-driven interface to visualize the effects of vehicle setup changes, helping drivers optimize their performance on the track.
+### [LapSetup](https://lapsetup.vercel.app/) is a quick setup visualizer and strategy tool for sim racers. It helps you preview how your setup changes affect car behavior and calculate fuel strategy on the fly.
 
-![LabSetup Preview](img/preview.png)
+<h6>Simulation values are approximate — results may not reflect 100% in-game behavior. It's meant for directional guidance</h6>
 
-## Features
+![LapSetup Preview](img/preview.png)
 
-- **Dynamic Visualization:** Interactive Radar and Bar charts provide real-time feedback on Downforce, Grip, Turn-in, Bumps absorption, and Top Speed.
-- **Car-Aware Targets:** "Ideal Setup" benchmarks automatically adapt based on the selected track's characteristics and the specific baseline physics of the chosen vehicle.
-- **Hierarchical Layouts:** A structured selection menu supporting various tracks and their nested alternative layouts (e.g., Monza Curva Grande, Bahrain Outer).
-- **Setup Management:** Save, load, and organize specific setups for individual cars.
-- **Integrated Calculator:** Built-in tools for estimating fuel loads and race strategy per vehicle and track.
+## ✨ What it does
 
-## Technology Stack
+- **Setup Preview:** Use the Radar and Bar charts to see how Downforce, Grip, Turn-in, and other metrics shift with your adjustments.
+- **Smart Targets:** Benchmarks update automatically based on the track and car you've picked.
+- **Track Support:** Quick selection for different circuits and layouts.
+- **Save Setups:** Keep track of your favorite settings locally.
+- **Fuel Calc:** A handy tool to estimate your required fuel and race strategy.
 
-- **HTML5 & Vanilla JS:** Lightweight and responsive core mechanics without heavy framework dependencies.
-- **Tailwind CSS:** Modern utility-first styling for a sleek, glassmorphism-inspired UI.
-- **SVG Graphics:** Scalable, crisp performance visualizations.
+## 🛠️ Built with
 
-*Note: Simulation values are approximate — results may not reflect 100% in game behaviour.*
-                
+- **Vanilla JS:** Fast and lightweight.
+- **Tailwind CSS:** Clean, dark-mode styling.
+- **SVG:** For the charts and graphs.
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](https://github.com/Simplezes/LapSetup/blob/main/LICENSE) file for details.
